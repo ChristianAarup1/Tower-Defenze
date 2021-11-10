@@ -12,8 +12,8 @@ namespace Tower_Defense
     {
         protected int damage;
         protected float speed;
-        protected bool isActive;
-        protected Texture2D sprite;
+        protected bool active = false;
+        protected bool dead = false;
 
         public abstract void OnHit(Enemy other);
 

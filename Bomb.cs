@@ -9,8 +9,15 @@ namespace Tower_Defense
 {
     class Bomb : Projectile
     {
+        public Texture2D bombTexture;
+        public Vector2 bombPosition;
+        public Vector2 bombMovement;
         private int aoeDamage;
 
+        public void InIt()
+        {
+            
+        }
         public override void OnHit(Enemy other)
         {
 
