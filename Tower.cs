@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Tower_Defense
 {
-    public class Tower
+    public abstract class Tower
     {
         protected int damage;
         protected float range;
