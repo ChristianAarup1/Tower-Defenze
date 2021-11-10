@@ -8,19 +8,19 @@ using Microsoft.Xna.Framework.Content;
 
 namespace Tower_Defense
 {
-    abstract class Enemy : Game1
+    class EnemyStrong : Enemy
     {
-        // Variabler/fields
-        protected Vector2 position;
-        protected float speed = 0f;
-        protected int value = 0;
-        protected Texture2D sprite;
-        protected int health;
+        // Variabler hentes fra Enemy superklassen
 
-        // Metode til at instantiere content
+        public int Death(int value)
+        {
+            value = 15;
+            return value;
+        }
+
         public void LoadContent(ContentManager content)
         {
-            
+
         }
 
         public void Update(GameTime gameTime)
@@ -32,7 +32,5 @@ namespace Tower_Defense
         {
 
         }
-
-
     }
 }
