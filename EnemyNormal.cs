@@ -21,7 +21,7 @@ namespace Tower_Defense
 
         public void LoadContent(ContentManager content)
         {
-
+            content.Load<Texture2D>("enemyNormal");
         }
 
         public void Update(GameTime gameTime)
@@ -32,6 +32,14 @@ namespace Tower_Defense
         public void Draw(SpriteBatch spriteBatch)
         {
 
+        }
+
+        public void OnCollision(Enemy other)
+        {
+            if (other is /* Insert projectile */)
+            {
+                // Add damage or destruction/de-activate
+            }
         }
     }
 }

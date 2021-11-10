@@ -20,7 +20,7 @@ namespace Tower_Defense
         // Metode til at instantiere content
         public void LoadContent(ContentManager content)
         {
-            
+
         }
 
         public void Update(GameTime gameTime)

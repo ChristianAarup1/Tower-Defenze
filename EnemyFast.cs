@@ -20,7 +20,7 @@ namespace Tower_Defense
 
         public void LoadContent(ContentManager content)
         {
-
+            content.Load<Texture2D>("enemyFast");
         }
 
         public void Update(GameTime gameTime)
@@ -33,6 +33,13 @@ namespace Tower_Defense
 
         }
 
+        public void OnCollision(Enemy other)
+        {
+            if (other is /* Insert projectile */)
+            {
+                // Add damage or destruction/de-activate
+            }
+        }
 
     }
 }
