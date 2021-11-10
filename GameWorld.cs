@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Tower_Defense
 {
-    public class Game1 : Game
+    public class GameWorld : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
