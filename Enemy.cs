@@ -8,25 +8,22 @@ using Microsoft.Xna.Framework.Content;
 
 namespace Tower_Defense
 {
-    abstract class Enemy : Game1
+    abstract class Enemy
     {
         // Variabler/fields
         protected Vector2 position;
         protected float speed = 0f;
         protected int value = 0;
         protected Texture2D sprite;
-        protected int health;
+        private int health;
+
+        public int Health { get => health; set => health = value; }
+
 
         // Metode til at instantiere content
-        public void LoadContent(ContentManager content)
-        {
+        public abstract void LoadContent(ContentManager content);
 
-        }
-
-        public void Update(GameTime gameTime)
-        {
-
-        }
+        public abstract void Update(GameTime gameTime);
 
         public void Draw(SpriteBatch spriteBatch)
         {

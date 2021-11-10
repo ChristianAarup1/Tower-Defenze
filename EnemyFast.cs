@@ -11,6 +11,7 @@ namespace Tower_Defense
     class EnemyFast : Enemy
     {
         // Variabler hentes fra Enemy superklassen
+        private int fastHealth = 75;
 
         public int Death(int value)
         {
@@ -18,13 +19,15 @@ namespace Tower_Defense
             return value;
         }
 
-        public void LoadContent(ContentManager content)
+        public override void LoadContent(ContentManager content)
         {
             content.Load<Texture2D>("enemyFast");
+            Health = 75;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
+            
 
         }
 
@@ -33,13 +36,13 @@ namespace Tower_Defense
 
         }
 
-        public void OnCollision(Enemy other)
-        {
-            if (other is /* Insert projectile */)
-            {
-                // Add damage or destruction/de-activate
-            }
-        }
+        //public void OnCollision(Enemy other)
+        //{
+        //    if (other is /* Insert projectile */)
+        //    {
+        //        // Add damage or destruction/de-activate
+        //    }
+        //}
 
     }
 }

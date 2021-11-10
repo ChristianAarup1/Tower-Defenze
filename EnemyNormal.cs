@@ -11,7 +11,7 @@ namespace Tower_Defense
     class EnemyNormal : Enemy
     {
         // Variabler hentes fra Enemy superklassen
-
+        private int normalHealth = 100;
 
         public int Death (int value)
         {
@@ -19,14 +19,15 @@ namespace Tower_Defense
             return value;
         }
 
-        public void LoadContent(ContentManager content)
+        public override void LoadContent(ContentManager content)
         {
             content.Load<Texture2D>("enemyNormal");
+            Health = normalHealth;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-
+            
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -34,12 +35,12 @@ namespace Tower_Defense
 
         }
 
-        public void OnCollision(Enemy other)
-        {
-            if (other is /* Insert projectile */)
-            {
-                // Add damage or destruction/de-activate
-            }
-        }
+        //public void OnCollision(Enemy other)
+        //{
+        //    if (other is /* Insert projectile */)
+        //    {
+        //        // Add damage or destruction/de-activate
+        //    }
+        //}
     }
 }

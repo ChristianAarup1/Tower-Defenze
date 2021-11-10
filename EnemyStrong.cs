@@ -11,19 +11,20 @@ namespace Tower_Defense
     class EnemyStrong : Enemy
     {
         // Variabler hentes fra Enemy superklassen
-
+        private int strongHealth = 150;
         public int Death(int value)
         {
             value = 15;
             return value;
         }
 
-        public void LoadContent(ContentManager content)
+        public override void LoadContent(ContentManager content)
         {
             content.Load<Texture2D>("enemyStrong");
+            Health = strongHealth;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
 
         }
@@ -33,12 +34,12 @@ namespace Tower_Defense
 
         }
 
-        public void OnCollision(Enemy other)
-        {
-            if (other is /* Insert projectile */)
-            {
-                // Add damage or destruction/de-activate
-            }
-        }
+        //public void OnCollision(Enemy other)
+        //{
+        //    if (other is /* Insert projectile */)
+        //    {
+        //        // Add damage or destruction/de-activate
+        //    }
+        //}
     }
 }
