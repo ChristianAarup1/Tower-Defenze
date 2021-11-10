@@ -10,10 +10,13 @@ namespace Tower_Defense
 {
     public abstract class Projectile
     {
-        protected int damage;
-        protected float speed;
-        protected bool active = false;
-        protected bool dead = false;
+        public int speed = 10;
+
+        public Projectile(Texture2D tex, Point position) : base(tex, position) { }
+
+        public abstract bool Move();
+
+        public abstract void Damage();
 
         public abstract void OnHit(Enemy other);
 
