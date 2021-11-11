@@ -13,10 +13,10 @@ namespace Tower_Defense
         // Variabler hentes fra Enemy superklassen
         private int normalHealth = 100;
 
-        public int Death (int value)
+        public int Death (int normalValue)
         {
-            value = 10;
-            return value;
+            normalValue = 10;
+            return normalValue;
         }
 
         public override void LoadContent(ContentManager content)
@@ -27,7 +27,8 @@ namespace Tower_Defense
 
         public override void Update(GameTime gameTime)
         {
-            
+            // Make the unit move on the specified path (enum?)
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
